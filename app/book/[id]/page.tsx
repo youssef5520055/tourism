@@ -9,7 +9,7 @@ import { getTripById } from '@/services/api';
 
 export default function BookingPage() {
   const params = useParams();
-  const [trip, setTrip] = useState(null);
+  const [trip, setTrip] = useState<any>(null);
   const [bookingData, setBookingData] = useState({
     travelers: 1,
     selectedDate: '',

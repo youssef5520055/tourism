@@ -1,4 +1,6 @@
-'use client';
+import sys
+
+content = ''''use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -18,31 +20,31 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "p-4" : "p-6"}`}>
-      <nav className={`mx-auto max-w-7xl transition-all duration-500 rounded-full ${scrolled ? "bg-white/80 backdrop-blur-xl shadow-lg border border-white/20" : "bg-transparent"}`}>
+    <div className={\ixed top-0 left-0 right-0 z-50 transition-all duration-300 \\}>
+      <nav className={\mx-auto max-w-7xl transition-all duration-500 rounded-full \\}>
         <div className="px-6 md:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <MapPin className={`w-8 h-8 transition-colors ${scrolled ? "text-[#CA8A04]" : "text-[#CA8A04]"}`} />
-              <span className={`text-2xl font-serif font-bold transition-colors ${scrolled ? "text-[#1C1917]" : "text-white drop-shadow-md"}`}>WanderAI</span>
+              <MapPin className={\w-8 h-8 transition-colors \\} />
+              <span className={\	ext-2xl font-serif font-bold transition-colors \\}>WanderAI</span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/search" className={`text-sm font-medium transition-colors hover:text-[#CA8A04] ${scrolled ? "text-stone-600" : "text-stone-200"}`}>
+              <Link href="/search" className={\	ext-sm font-medium transition-colors hover:text-[#CA8A04] \\}>
                 Destinations
               </Link>
-              <Link href="/about" className={`text-sm font-medium transition-colors hover:text-[#CA8A04] ${scrolled ? "text-stone-600" : "text-stone-200"}`}>
+              <Link href="/about" className={\	ext-sm font-medium transition-colors hover:text-[#CA8A04] \\}>
                 About
               </Link>
-              <Link href="/contact" className={`text-sm font-medium transition-colors hover:text-[#CA8A04] ${scrolled ? "text-stone-600" : "text-stone-200"}`}>
+              <Link href="/contact" className={\	ext-sm font-medium transition-colors hover:text-[#CA8A04] \\}>
                 Contact
               </Link>
-              <Link href="/dashboard" className={`text-sm font-medium transition-colors hover:text-[#CA8A04] ${scrolled ? "text-stone-600" : "text-stone-200"}`}>
+              <Link href="/dashboard" className={\	ext-sm font-medium transition-colors hover:text-[#CA8A04] \\}>
                 My Trips
               </Link>
-              <Button asChild className={`rounded-full px-6 transition-all hover:scale-105 ${scrolled ? "bg-[#1C1917] text-white hover:bg-stone-800" : "bg-white text-stone-900 hover:bg-stone-100"}`}>
+              <Button asChild className={\ounded-full px-6 transition-all hover:scale-105 \\}>
                 <Link href="/admin/login">
                   <User className="w-4 h-4 mr-2" />
                   Sign In
@@ -52,7 +54,7 @@ export default function Navbar() {
 
             {/* Mobile menu button */}
             <button
-              className={`md:hidden ${scrolled ? "text-stone-900" : "text-white"}`}
+              className={\md:hidden \\}
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -107,3 +109,7 @@ export default function Navbar() {
     </div>
   );
 }
+'''
+
+with open('components/Navbar.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)

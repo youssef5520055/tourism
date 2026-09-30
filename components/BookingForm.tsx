@@ -152,7 +152,7 @@ export default function BookingForm({ trip, bookingData, onBookingDataChange }: 
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            {trip.extras?.map((extra, index) => (
+            {trip.extras?.map((extra: any, index: number) => (
               <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
                 <div>
                   <h4 className="font-medium">{extra.name}</h4>

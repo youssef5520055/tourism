@@ -1,4 +1,4 @@
-import Hero from '@/components/landing/Hero';
+﻿import Hero from '@/components/landing/Hero';
 import SearchBar from '@/components/landing/SearchBar';
 import FeaturedDestinations from '@/components/landing/FeaturedDestinations';
 import SeasonalOffers from '@/components/landing/SeasonalOffers';
@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="container mx-auto px-4 py-8">
+      <div className="relative -mt-20 z-20">
         <SearchBar />
-        <FeaturedDestinations />
-        <SeasonalOffers />
-        <Testimonials />
       </div>
+      <FeaturedDestinations />
+      <SeasonalOffers />
+      <Testimonials />
     </>
   );
 }

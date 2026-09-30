@@ -10,8 +10,8 @@ import { getUserBookings, getUserProfile } from '@/services/api';
 
 export default function Dashboard() {
   const router = useRouter();
-  const [user, setUser] = useState(null);
-  const [bookings, setBookings] = useState([]);
+  const [user, setUser] = useState<any>(null);
+  const [bookings, setBookings] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Dashboard() {
 
       setUser(userResponse.data);
       setBookings(bookingsResponse.data);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error loading user data:', error);
       if (error.response?.status === 401) {
         router.push('/auth/login');

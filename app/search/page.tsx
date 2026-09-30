@@ -9,7 +9,7 @@ import { searchTrips } from '@/services/api';
 
 export default function SearchResults() {
   const searchParams = useSearchParams();
-  const [trips, setTrips] = useState([]);
+  const [trips, setTrips] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({
     destination: searchParams.get('destination') || '',

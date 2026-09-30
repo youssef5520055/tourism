@@ -16,7 +16,7 @@ export default function AdminLogin() {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
@@ -25,7 +25,7 @@ export default function AdminLogin() {
       localStorage.setItem('adminToken', response.data.token);
       toast.success('Login successful');
       router.push('/admin');
-    } catch (error) {
+    } catch (error: any) {
       toast.error(error.response?.data?.message || 'Login failed');
     } finally {
       setLoading(false);

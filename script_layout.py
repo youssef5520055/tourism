@@ -1,4 +1,6 @@
-import './globals.css';
+import sys
+
+content = '''import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
@@ -41,3 +43,7 @@ export default function RootLayout({
     </html>
   );
 }
+'''
+
+with open('app/layout.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)

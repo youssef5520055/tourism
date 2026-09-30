@@ -83,7 +83,7 @@ export default async function TripDetails({ params }: Props) {
             <div className="mt-6 pt-6 border-t border-gray-200">
               <h3 className="font-semibold text-gray-900 mb-3">Trip Highlights</h3>
               <ul className="space-y-2">
-                {trip.highlights?.map((highlight, index) => (
+                {trip.highlights?.map((highlight: any, index: number) => (
                   <li key={index} className="flex items-start">
                     <span className="text-blue-500 mr-2">✓</span>
                     <span className="text-sm text-gray-700">{highlight}</span>

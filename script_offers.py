@@ -1,4 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card';
+import sys
+
+content = '''import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Clock, ArrowRight } from 'lucide-react';
 
@@ -8,21 +10,21 @@ const offers = [
     description: 'Book 90 days in advance and save up to 25% on luxury suites',
     discount: '25% OFF',
     validUntil: 'Valid until March 31, 2026',
-    image: '/images/suite.jpg'
+    image: 'https://images.unsplash.com/photo-1542314831-c6a4d14eff50?q=80&w=800&auto=format&fit=crop'
   },
   {
     title: 'Summer Paradise',
     description: 'Exclusive beach destinations with private villa accommodations',
     discount: '20% OFF',
     validUntil: 'Limited time offer',
-    image: '/images/beach.jpg'
+    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop'
   },
   {
     title: 'Alpine Escape',
     description: 'Mountain and hiking tours for the adventurous spirit',
     discount: '30% OFF',
     validUntil: 'Book by April 15, 2026',
-    image: '/images/mountain.jpg'
+    image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop'
   }
 ];
 
@@ -42,7 +44,7 @@ export default function SeasonalOffers() {
             <Card key={index} className="overflow-hidden border-0 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300">
               <div 
                 className="h-48 bg-cover bg-center relative"
-                style={{ backgroundImage: 'url(' + offer.image + ')' }}
+                style={{ backgroundImage: \url(\)\ }}
               >
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute top-4 left-4 bg-[#CA8A04] text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider">
@@ -70,3 +72,7 @@ export default function SeasonalOffers() {
     </section>
   );
 }
+'''
+
+with open('components/landing/SeasonalOffers.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)

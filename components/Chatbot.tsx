@@ -43,7 +43,7 @@ export default function Chatbot() {
     }, 1000);
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSendMessage();
     }

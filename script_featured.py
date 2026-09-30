@@ -1,4 +1,6 @@
-import Image from 'next/image';
+import sys
+
+content = '''import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Star, ArrowRight } from 'lucide-react';
@@ -9,33 +11,33 @@ const destinations = [
     id: 1,
     name: 'Amalfi Coast, Italy',
     description: 'Experience breathtaking sunsets and charming cliffside villages.',
-    image: '/images/amalfi.jpg',
+    image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=800&auto=format&fit=crop',
     rating: 4.9,
-    price: '$2,299',
+    price: ',299',
   },
   {
     id: 2,
     name: 'Kyoto, Japan',
     description: 'Immerse yourself in the perfect blend of tradition and modernity.',
-    image: '/images/kyoto.jpg',
+    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop',
     rating: 4.8,
-    price: '$1,899',
+    price: ',899',
   },
   {
     id: 3,
     name: 'Swiss Alps',
     description: 'Adventure awaits in pristine mountain landscapes and chalets.',
-    image: '/images/alps.jpg',
+    image: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop',
     rating: 4.9,
-    price: '$3,599',
+    price: ',599',
   },
   {
     id: 4,
     name: 'Maldives',
     description: 'Discover tropical paradise with stunning beaches and rich culture.',
-    image: '/images/maldives.jpg',
+    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800&auto=format&fit=crop',
     rating: 4.7,
-    price: '$4,199',
+    price: ',199',
   },
 ];
 
@@ -99,3 +101,7 @@ export default function FeaturedDestinations() {
     </section>
   );
 }
+'''
+
+with open('components/landing/FeaturedDestinations.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)

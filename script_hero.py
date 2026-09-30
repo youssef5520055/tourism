@@ -1,4 +1,6 @@
-import Link from 'next/link';
+import sys
+
+content = '''import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, MapPin } from 'lucide-react';
@@ -9,7 +11,7 @@ export default function Hero() {
       {/* Background Image with Parallax & Liquid Gradient */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop"
           alt="Paris architecture luxury"
           fill
           className="object-cover opacity-80"
@@ -77,3 +79,7 @@ export default function Hero() {
     </div>
   );
 }
+'''
+
+with open('components/landing/Hero.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)

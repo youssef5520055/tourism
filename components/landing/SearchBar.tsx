@@ -14,7 +14,7 @@ export default function SearchBar() {
     travelers: '',
   });
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const params = new URLSearchParams({
       destination: searchData.destination,
