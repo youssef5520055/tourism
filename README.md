@@ -2,7 +2,7 @@
 
 WanderAI is a premium, AI-powered travel platform designed to provide exclusive, personalized travel experiences. 
 
-![Liquid Glass Design System](./public/images/hero.jpg)
+![WanderAI Full Page Preview](./public/images/screenshot_full.png)
 
 ## Deployment
 **Live Demo:** [https://tourism-ten-gamma.vercel.app](https://tourism-ten-gamma.vercel.app)
